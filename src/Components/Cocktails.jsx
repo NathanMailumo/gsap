@@ -8,17 +8,17 @@ const Cocktails = ()=> {
         const ParallaxTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger:'#cocktails',
-                start: 'top, 30%',
-                end: 'bottom, 80%',
+                start: 'top 30%',
+                end: 'bottom 80%',
                 scrub: true,
             }
         })
         ParallaxTimeline
-        .from('#c-left-leaft', {
+        .from('#c-left-leaf', {
             x: -100,
             y:100
         })
-        .from('#c-right-leaft', {
+        .from('#c-right-leaf', {
             x: 100,
             y:100
         })

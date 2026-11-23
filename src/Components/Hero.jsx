@@ -6,7 +6,6 @@ import { useMediaQuery } from "react-responsive";
 
 const Hero = ()=>{
     const videoRef  = useRef();
-    const videoTimelineRef = useRef();
 
     const isMobile = useMediaQuery({maxWidth: 767})
 
@@ -39,7 +38,7 @@ const Hero = ()=>{
         gsap.timeline({
             scrollTrigger: {
                 trigger: '#hero',
-                start:'top, top',
+                start: 'top top',
                 scrub: true,
 
             }
