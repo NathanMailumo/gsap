@@ -58,6 +58,22 @@ const Menu = () => {
         ease: 'power1.inOut'
       },
     );
+    const leafTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#menu',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      }
+    })
+    leafTimeline.from('#m-left-leaf', {
+      x: -100,
+      y: 100,
+    }, 0)
+    leafTimeline.from('#m-right-leaf', {
+      x: 100,
+      y: -100,
+    }, 0)
   }, [currentIndex]);
 
   const goToSlide = (index) => {
